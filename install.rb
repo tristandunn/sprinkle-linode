@@ -1,10 +1,12 @@
 require 'packages/database'
 require 'packages/essential'
+require 'packages/memcached'
 require 'packages/scm'
 
 policy :linode, :roles => :app do
   requires :build_essential
   requires :database
+  requires :memcached
   requires :scm
 end
 
