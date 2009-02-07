@@ -1,8 +1,7 @@
 package :gems do
   description 'Gems for Ruby'
 
-  gem 'memcache-client'
-  gem 'mysql'
+  gem 'memcache-client mysql'
 
   requires :rubygems
 
