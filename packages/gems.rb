@@ -1,10 +1,13 @@
 package :gems do
   description 'Gems for Ruby'
-  gem 'memcache-client mysql'
+
+  gem 'memcache-client'
+  gem 'mysql'
+
   requires :rubygems
 
   verify do
-    has_gem 'memcache-client'
-    has_gem 'mysql'
+    ruby_can_load 'memcache'
+    ruby_can_load 'mysql'
   end
 end
