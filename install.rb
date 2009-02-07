@@ -10,8 +10,8 @@ require 'packages/ruby_enterprise'
 require 'packages/scm'
 
 policy :linode, :roles => :app do
-  requires :apache
   requires :build_essential
+  requires :apache
   requires :database
   requires :gems
   requires :memcached
