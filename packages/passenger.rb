@@ -1,6 +1,6 @@
 package :passenger do
   description 'Passenger (mod_rails) Apache extension'
-  requires :apache, :rubygems
+  requires :apache, :passenger_dependencies, :rubygems
   version '2.0.6'
   gem 'passenger' do
     post :install, 'echo -en "\n\n\n\n" | passenger-install-apache2-module',
@@ -22,4 +22,9 @@ package :passenger do
     has_file      "/usr/lib/ruby/gems/1.8/gems/passenger-#{version}/ext/apache2/mod_passenger.so"
     has_directory "/usr/lib/ruby/gems/1.8/gems/passenger-#{version}"
   end
+end
+
+package :passenger_dependencies do
+  description 'Passenger build dependencies'
+  apt 'libreadline5-dev'
 end
