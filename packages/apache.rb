@@ -15,7 +15,7 @@ package :apache do
     Dir["#{SITES_PATH}/*"].each do |site|
       name = File.basename(site)
 
-      File.open(site).read do |file|
+      File.open(site) do |file|
         while line = file.gets
           post :install, "echo \"#{line}\" >> /etc/apache2/sites-available/#{name}"
         end
