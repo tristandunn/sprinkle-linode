@@ -9,6 +9,7 @@ package :ruby_enterprise do
                    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rdoc /usr/bin/rdoc',
                    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/irb /usr/bin/irb',
                    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/gem /usr/bin/gem',
+                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rake /usr/bin/rake',
                    'gem update --system',
                    'gem sources -a http://gems.github.com'
   end
