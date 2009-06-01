@@ -8,8 +8,8 @@ package :apache do
                    'a2enmod rewrite',
                    'a2dissite default',
                    'rm -fr /var/www/apache2-default',
-                   'sed -i "s|^ServerSignature On$|ServerSignature Off|" /etc/apache2/apache2.conf',
-                   'sed -i "s|^ServerTokens Full$|ServerTokens Prod|" /etc/apache2/apache2.conf'
+                   'sed -i "s|^ServerSignature .*$|ServerSignature Off|" /etc/apache2/conf.d/security',
+                   'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
 
     Dir["#{SITES_PATH}/*"].each do |site|
       name = File.basename(site)
