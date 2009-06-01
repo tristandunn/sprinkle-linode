@@ -20,5 +20,6 @@ package :ruby_enterprise do
     has_symlink '/usr/bin/rdoc', '/opt/ruby-enterprise-1.8.6-20090520/bin/rdoc'
     has_symlink '/usr/bin/irb',  '/opt/ruby-enterprise-1.8.6-20090520/bin/irb'
     has_symlink '/usr/bin/gem',  '/opt/ruby-enterprise-1.8.6-20090520/bin/gem'
+    has_symlink '/usr/bin/rake', '/opt/ruby-enterprise-1.8.6-20090520/bin/rake'
   end
 end
