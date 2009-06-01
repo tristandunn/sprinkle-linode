@@ -4,8 +4,6 @@ require 'packages/essential'
 require 'packages/gems'
 require 'packages/memcached'
 require 'packages/passenger'
-require 'packages/ruby'
-require 'packages/rubygems'
 require 'packages/ruby_enterprise'
 require 'packages/scm'
 
@@ -16,8 +14,6 @@ policy :linode, :roles => :app do
   requires :gems
   requires :memcached
   requires :passenger
-  requires :ruby
-  requires :rubygems
   requires :ruby_enterprise
   requires :scm
 end

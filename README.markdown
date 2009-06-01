@@ -1,6 +1,6 @@
 # sprinkle-linode
 
-An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I use to set up a [Rails](http://rubyonrails.org) environment on a Debian [Linode](http://linode.com), although it should work on any Debian 4.0 install.
+An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I use to set up a [Rails](http://rubyonrails.org) environment on a Debian [Linode](http://linode.com), although it should work on any Debian 5.0 install.
 
 ## What does it install?
 
@@ -9,9 +9,8 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
 * memcached
 * MySQL
 * Passenger
-* Ruby
 * Ruby Enterprise
-* rubygems
+* Gems
   * memcache-client
   * mysql
 
@@ -28,8 +27,8 @@ It can also copy over any virtual hosts you create in `assets/apache/sites` as w
 3. Now download or clone [sprinkle-linode](http://github.com/tristandunn/sprinkle-linode).
    <pre><code>git clone git://github.com/tristandunn/sprinkle-linode.git</code></pre>
 
-4. Rename `deploy.example.rb` to `deploy.rb` and edit the settings appropriately. For more details on possible options, see [Capistrano](http://www.capify.org/).
-   <pre><code>mv deploy.example.rb deploy.rb</code></pre>
+4. Copy `deploy.example.rb` to `deploy.rb` and edit the settings appropriately. For more details on possible options, see [Capistrano](http://www.capify.org/).
+   <pre><code>cp deploy.example.rb deploy.rb</code></pre>
 
 5. Finally run `install.rb` with `sprinkle`.
    <pre><code>sprinkle -c -s install.rb</code></pre>

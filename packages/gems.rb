@@ -3,7 +3,7 @@ package :gems do
 
   gem 'memcache-client mysql'
 
-  requires :rubygems
+  requires :ruby_enterprise
 
   verify do
     ruby_can_load 'memcache'

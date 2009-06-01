@@ -2,9 +2,8 @@ SITES_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..', 'assets', 
 
 package :apache do
   describe 'Apache web server'
-  apt 'apache2 apache2.2-common apache2-mpm-prefork apache2-utils apache2-prefork-dev libexpat1 ssl-cert' do
-    post :install, 'a2enmod deflate',
-                   'a2enmod expires',
+  apt 'apache2-mpm-prefork apache2-prefork-dev libapr1-dev' do
+    post :install, 'a2enmod expires',
                    'a2enmod headers',
                    'a2enmod rewrite',
                    'a2dissite default',
