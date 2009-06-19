@@ -1,9 +1,9 @@
 package :passenger do
   description 'Passenger (mod_rails) Apache extension'
   requires :apache, :ruby_enterprise
-  version '2.2.2'
+  version '2.2.3'
   gem 'passenger' do
-    post :install, 'echo -en "\n\n\n\n" | /opt/ruby-enterprise-1.8.6-20090520/lib/ruby/gems/1.8/gems/passenger-2.2.2/bin/passenger-install-apache2-module',
+    post :install, 'echo -en "\n\n\n\n" | /opt/ruby-enterprise-1.8.6-20090520/lib/ruby/gems/1.8/gems/passenger-2.2.3/bin/passenger-install-apache2-module',
                    'mkdir -p /etc/apache2/extras',
                    'touch /etc/apache2/extras/passenger.conf',
                    "echo 'Include /etc/apache2/extras/passenger.conf' >> /etc/apache2/apache2.conf"
