@@ -9,6 +9,7 @@ package :apache do
                    'a2dissite default',
                    'rm -fr /var/www/*',
                    'rm -fr /etc/apache2/sites-available/*',
+                   'cd /var/www && chown www-data:www-data . && chmod g+s .',
                    'sed -i "s|^ServerSignature .*$|ServerSignature Off|" /etc/apache2/conf.d/security',
                    'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
 
