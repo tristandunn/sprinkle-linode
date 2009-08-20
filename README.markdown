@@ -45,6 +45,7 @@ The majority of this is based on the examples provided with Sprinkle.
 
 The MIT License
 
+Copyright (c) 2008-2009 Marcus Crafter crafterm@redartisan.com
 Copyright (c) 2009 Tristan Dunn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
