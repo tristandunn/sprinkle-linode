@@ -7,7 +7,8 @@ package :apache do
                    'a2enmod headers',
                    'a2enmod rewrite',
                    'a2dissite default',
-                   'rm -fr /var/www/apache2-default',
+                   'rm -fr /var/www/*',
+                   'rm -fr /etc/apache2/sites-available/*',
                    'sed -i "s|^ServerSignature .*$|ServerSignature Off|" /etc/apache2/conf.d/security',
                    'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
 
