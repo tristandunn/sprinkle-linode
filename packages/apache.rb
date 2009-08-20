@@ -12,15 +12,12 @@ package :apache do
                    'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
 
     Dir["#{SITES_PATH}/*"].each do |site|
-      name = File.basename(site)
+      name     = File.basename(site)
+      contents = File.read(site).gsub("'", "'\\\\''").gsub("\n", '\n')
 
-      File.open(site) do |file|
-        while line = file.gets
-          post :install, "echo \"#{line}\" >> /etc/apache2/sites-available/#{name}"
-        end
-      end
-
-      post :install, "a2ensite #{name}"
+      post :install,
+        "echo -e '#{contents}' | tee -a /etc/apache2/sites-available/#{name}"
+        "a2ensite #{name}"
     end
 
     post :install, '/etc/init.d/apache2 restart'
