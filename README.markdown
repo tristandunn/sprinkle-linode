@@ -27,13 +27,15 @@ It can also copy over any virtual hosts you create in `assets/apache/sites` as w
 3. Now download or clone [sprinkle-linode](http://github.com/tristandunn/sprinkle-linode).
    <pre><code>git clone git://github.com/tristandunn/sprinkle-linode.git</code></pre>
 
-4. Copy `deploy.example.rb` to `deploy.rb` and edit the settings appropriately. For more details on possible options, see [Capistrano](http://www.capify.org/).
+4. Edit, rename, or remove the example Apache configuration located at <code>assets/apache/example.conf</code>.
+
+5. Copy `deploy.example.rb` to `deploy.rb` and edit the settings appropriately. For more details on possible options, see [Capistrano](http://www.capify.org/).
    <pre><code>cp deploy.example.rb deploy.rb</code></pre>
 
-5. Finally run `install.rb` with `sprinkle`.
+6. Finally run `install.rb` with `sprinkle`.
    <pre><code>sprinkle -c -s install.rb</code></pre>
 
-6. Now grab a drink, sit back, and relax. It will install everything in around 15 minutes!
+7. Now grab a drink, sit back, and relax. It will install everything in around 15 minutes!
 
 ## Credits
 
