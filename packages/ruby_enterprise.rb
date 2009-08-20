@@ -2,16 +2,17 @@ package :ruby_enterprise do
   description 'Ruby enterprise edition'
   version '1.8.6-20090520'
   source "http://rubyforge.org/frs/download.php/57097/ruby-enterprise-#{version}.tar.gz" do
-    custom_install 'echo -en "\n\n\n\n" | ./installer'
+  custom_install 'echo -en "\n\n\n\n" | ./installer'
 
-    post :install, 'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/ruby /usr/bin/ruby',
-                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/ri /usr/bin/ri',
-                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rdoc /usr/bin/rdoc',
-                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/irb /usr/bin/irb',
-                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/gem /usr/bin/gem',
-                   'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rake /usr/bin/rake',
-                   'gem update --system',
-                   'gem sources -a http://gems.github.com'
+  post :install,
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/ruby /usr/bin/ruby',
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/ri /usr/bin/ri',
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rdoc /usr/bin/rdoc',
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/irb /usr/bin/irb',
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/gem /usr/bin/gem',
+    'ln -s /opt/ruby-enterprise-1.8.6-20090520/bin/rake /usr/bin/rake',
+    'gem update --system',
+    'gem sources -a http://gems.github.com'
   end
 
   verify do

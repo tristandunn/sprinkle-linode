@@ -3,15 +3,16 @@ SITES_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..', 'assets', 
 package :apache do
   describe 'Apache web server'
   apt 'apache2-mpm-prefork apache2-prefork-dev libapr1-dev' do
-    post :install, 'a2enmod expires',
-                   'a2enmod headers',
-                   'a2enmod rewrite',
-                   'a2dissite default',
-                   'rm -fr /var/www/*',
-                   'rm -fr /etc/apache2/sites-available/*',
-                   'cd /var/www && chown www-data:www-data . && chmod g+s .',
-                   'sed -i "s|^ServerSignature .*$|ServerSignature Off|" /etc/apache2/conf.d/security',
-                   'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
+    post :install,
+      'a2enmod expires',
+      'a2enmod headers',
+      'a2enmod rewrite',
+      'a2dissite default',
+      'rm -fr /var/www/*',
+      'rm -fr /etc/apache2/sites-available/*',
+      'cd /var/www && chown www-data:www-data . && chmod g+s .',
+      'sed -i "s|^ServerSignature .*$|ServerSignature Off|" /etc/apache2/conf.d/security',
+      'sed -i "s|^ServerTokens .*$|ServerTokens Prod|" /etc/apache2/conf.d/security'
 
     Dir["#{SITES_PATH}/*"].each do |site|
       name     = File.basename(site)
