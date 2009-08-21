@@ -1,9 +1,9 @@
 package :gems do
   description 'Gems for Ruby'
 
-  gem 'memcache-client mysql'
+  gem 'memcache-client mysql rails'
 
-  requires :ruby_enterprise
+  requires :ruby, :memcached
 
   verify do
     ruby_can_load 'memcache'
