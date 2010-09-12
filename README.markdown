@@ -6,23 +6,21 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
 
 * Apache
 * git
-* memcached
+* redis
 * MySQL
 * Passenger
-* Ruby Enterprise
+* Ruby
 * Gems
-  * memcache-client
   * mysql
+  * rails
+  * redis
 
 It can also copy over any virtual hosts you create in `assets/apache/sites` as well as run any setup SQL by placing your statements in `assests/database/setup.sql`. Note that it will **NOT** create any directories required by your virtual hosts.
 
-## Quickstart
+## Quick Start
 
-1. Add GitHub to your gem sources, if you have not done so already.
-   <pre><code>gem sources -a http://gems.github.com</code></pre>
-
-2. Next install sprinkle, if you do not already have it.
-   <pre><code>sudo gem install crafterm-sprinkle</code></pre>
+1. Install sprinkle, if you do not already have it.
+   <pre><code>gem install sprinkle</code></pre>
 
 3. Now download or clone [sprinkle-linode](http://github.com/tristandunn/sprinkle-linode).
    <pre><code>git clone git://github.com/tristandunn/sprinkle-linode.git</code></pre>
@@ -46,8 +44,7 @@ The majority of this is based on the examples provided with Sprinkle.
 The MIT License
 
 Copyright (c) 2008-2009 Marcus Crafter crafterm@redartisan.com
-
-Copyright (c) 2009 Tristan Dunn
+Copyright (c) 2009-2010 Tristan Dunn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
