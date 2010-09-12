@@ -15,7 +15,7 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
   * rails
   * redis
 
-It can also copy over any virtual hosts you create in `assets/apache/sites` as well as run any setup SQL by placing your statements in `assests/database/setup.sql`. Note that it will **NOT** create any directories required by your virtual hosts.
+It can also copy over any virtual hosts you create in `assets/apache/sites` as well as run any setup SQL by placing your statements in `assests/database/setup.sql`.
 
 ## Quick Start
 

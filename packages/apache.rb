@@ -16,10 +16,14 @@ package :apache do
 
     Dir["#{SITES_PATH}/*"].each do |site|
       name     = File.basename(site)
-      contents = File.read(site).gsub("'", "'\\\\''").gsub("\n", '\n')
+      contents = File.read(site).gsub("'", "'\\\\''")
+
+      if contents =~ /^\s+DocumentRoot\s+(.*)$/
+        post :install, "mkdir -p #{$1}"
+      end
 
       post :install,
-        "echo -e '#{contents}' | tee -a /etc/apache2/sites-available/#{name}"
+        "echo -e '#{contents.gsub("\n", '\n')}' | tee -a /etc/apache2/sites-available/#{name}"
         "a2ensite #{name}"
     end
 
