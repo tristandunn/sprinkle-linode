@@ -3,6 +3,10 @@ package :git, :provides => :scm do
   version '1.7.2'
   source "http://kernel.org/pub/software/scm/git/git-#{version}.tar.gz"
   requires :git_dependencies
+
+  verify do
+    has_executable 'git'
+  end
 end
 
 package :git_dependencies do

@@ -21,5 +21,10 @@ package :rubygems do
   source "http://production.cf.rubygems.org/rubygems/rubygems-#{version}.tgz" do
     custom_install 'ruby setup.rb'
   end
+
   requires :ruby
+
+  verify do
+    ruby_can_load 'rubygems'
+  end
 end
