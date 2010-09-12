@@ -2,8 +2,8 @@ require 'packages/apache'
 require 'packages/database'
 require 'packages/essential'
 require 'packages/gems'
-require 'packages/memcached'
 require 'packages/passenger'
+require 'packages/redis'
 require 'packages/ruby'
 require 'packages/scm'
 
@@ -12,8 +12,8 @@ policy :linode, :roles => :app do
   requires :apache
   requires :database
   requires :gems
-  requires :memcached
   requires :passenger
+  requires :redis
   requires :ruby
   requires :scm
 end

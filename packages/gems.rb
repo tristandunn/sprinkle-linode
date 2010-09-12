@@ -1,12 +1,13 @@
 package :gems do
   description 'Gems for Ruby'
 
-  gem 'memcache-client mysql rails'
+  gem 'SystemTimer mysql rails redis'
 
-  requires :ruby, :memcached
+  requires :ruby, :redis
 
   verify do
-    ruby_can_load 'memcache'
+    ruby_can_load 'redis'
     ruby_can_load 'mysql'
+    ruby_can_load 'system_timer'
   end
 end
