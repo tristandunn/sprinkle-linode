@@ -10,7 +10,7 @@ package :mysql, :provides => :database do
   end
 
   verify do
-    has_executable '/usr/sbin/mysqld'
-    has_executable '/usr/bin/mysql'
+    has_executable 'mysqld'
+    has_executable 'mysql'
   end
 end
