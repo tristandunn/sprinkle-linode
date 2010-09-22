@@ -6,6 +6,7 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
 
 * Apache
 * git
+* monit
 * MySQL
 * Passenger
 * Ruby
@@ -23,7 +24,7 @@ It can also copy over any virtual hosts you create in `assets/apache/sites` as w
 3. Now download or clone [sprinkle-linode](http://github.com/tristandunn/sprinkle-linode).
    <pre><code>git clone git://github.com/tristandunn/sprinkle-linode.git</code></pre>
 
-4. Edit, rename, or remove the example Apache configuration located at <code>assets/apache/example.conf</code>.
+4. Edit, rename, or remove the the configuration files in <code>./assets/</code>.
 
 5. Copy `deploy.example.rb` to `deploy.rb` and edit the settings appropriately. For more details on possible options, see [Capistrano](http://www.capify.org/).
    <pre><code>cp deploy.example.rb deploy.rb</code></pre>
