@@ -3,7 +3,6 @@ require 'packages/database'
 require 'packages/essential'
 require 'packages/gems'
 require 'packages/passenger'
-require 'packages/redis'
 require 'packages/ruby'
 require 'packages/scm'
 
@@ -13,7 +12,6 @@ policy :linode, :roles => :app do
   requires :database
   requires :gems
   requires :passenger
-  requires :redis
   requires :ruby
   requires :scm
 end
