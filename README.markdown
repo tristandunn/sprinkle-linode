@@ -11,8 +11,7 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
 * postgres
 * ruby
 * gems
-  * rails
-  * pg
+  * bundler
 
 It can also copy over any virtual hosts you create in `assets/apache/sites`.
 
