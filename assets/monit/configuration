@@ -17,7 +17,7 @@
 ## Start monit in the background (run as a daemon) and check services at
 ## 2-minute intervals.
 
-set daemon  120
+set daemon 120
 
 ## Set syslog logging with the 'daemon' facility. If the FACILITY option is
 ## omitted, monit will use 'user' facility by default. If you want to log to
@@ -211,11 +211,11 @@ check process apache2 with pidfile /var/run/apache2.pid
   if children > 250 then restart
   if 5 restarts within 5 cycles then timeout
 
-check process mysql with pidfile /var/run/mysqld/mysqld.pid
+check process postgres with pidfile /var/lib/postgresql/8.3/main/postmaster.pid
   group database
-  start program = "/etc/init.d/mysql start"
-  stop program  = "/etc/init.d/mysql stop"
-  if failed host 127.0.0.1 port 3306 then restart
+  start program = "/etc/init.d/postgresql-8.3 start"
+  stop program  = "/etc/init.d/postgresql-8.3 stop"
+  if failed host 127.0.0.1 port 5432 then restart
   if 5 restarts within 5 cycles then timeout
 
 ###############################################################################

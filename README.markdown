@@ -4,17 +4,17 @@ An abstraction of the [Sprinkle](http://github.com/crafterm/sprinkle) scripts I 
 
 ## What does it install?
 
-* Apache
+* apache
 * git
 * monit
-* MySQL
-* Passenger
-* Ruby
-* Gems
-  * mysql
+* passenger
+* postgres
+* ruby
+* gems
   * rails
+  * pg
 
-It can also copy over any virtual hosts you create in `assets/apache/sites` as well as run any setup SQL by placing your statements in `assests/database/setup.sql`.
+It can also copy over any virtual hosts you create in `assets/apache/sites`.
 
 ## Quick Start
 
